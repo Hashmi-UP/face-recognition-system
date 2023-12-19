@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Time Tables</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link rel= "stylesheet" type= "text/css" id="bootstrap-stylesheet" href= "{{ url_for('static',filename='assets/css/bootstrap.css') }}">
+        <!--link href="assets/css/bootstrap.css" id="bootstrap-stylesheet" rel="stylesheet" type="text/css" /-->
+        <!-- Icons Css -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/css/icons.min.css') }}">
+        <!-- App Css-->
+        <link rel= "stylesheet" type= "text/css" id="app-stylesheet" href= "{{ url_for('static',filename='assets/css/app.min.css') }}">
+        <!--link href="assets/css/app.min.css" id="app-stylesheet" rel="stylesheet" type="text/css" /-->
+
+    </head>
+
+    <body data-layout="horizontal" data-topbar="dark">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Navigation Bar-->
+            <header id="topnav">
+
+                <!-- Topbar Start -->
+                <div class="navbar-custom">
+                    <div class="container-fluid">
+                        <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                            <li class="dropdown notification-list">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+
+                            
+    
+                           
+
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="/static/assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+                                    <span class="pro-user-name ml-1">
+                                        Admin <i class="mdi mdi-chevron-down"></i> 
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <div class="dropdown-header noti-title">
+                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="/index" class="dropdown-item notify-item">
+                                        <i class="fe-user"></i>
+                                        <span>Refresh</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fe-lock"></i>
+                                        <span>Lock Screen</span>
+                                    </a>
+
+                                    <div class="dropdown-divider"></div>
+
+                                    <!-- item-->
+                                    <a href="/logout" class="dropdown-item notify-item">
+                                        <i class="fe-log-out"></i>
+                                        <span>Logout</span>
+                                    </a>
+
+                                </div>
+                            </li>
+
+
+                            <li class="dropdown notification-list">
+                                <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect">
+                                    <i class="fe-settings noti-icon"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <!-- LOGO -->
+                        <div class="logo-box">
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-lg">
+                                    <img src="/static/assets/images/logo-light.png" alt="" height="16">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="/static/assets/images/logo-sm.png" alt="" height="24">
+                                </span>
+                            </a>
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-lg">
+                                    <img src="/static/assets/images/logo-dark.png" alt="" height="16">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="/static/assets/images/logo-sm.png" alt="" height="24">
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div> <!-- end container-fluid-->
+                </div>
+                <!-- end Topbar -->
+
+                <div class="topbar-menu">
+                    <div class="container-fluid">
+                        <div id="navigation">
+                            <!-- Navigation Menu-->
+                            <ul class="navigation-menu">
+
+                                <li class="has-submenu">
+                                    <a href="/index"><i class="mdi mdi-view-dashboard"></i>Dashboard</a>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="#"> <i class="mdi mdi-invert-colors"></i>User Interface  <div class="arrow-down"></div></a>
+                                    <ul class="submenu megamenu">
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a href="/register">Add Employee</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/tablesdatatable">Add/Edit Data</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/database">DataBase</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Present">Present Employee</a>
+                                                </li>
+                                                <li>
+                                                    <a href="pages-lock-screen.html">Lock Screen</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/logout">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                       
+                                        
+                                    </ul>
+                                </li>
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </ul>
+                            <!-- End navigation menu -->
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- end #navigation -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end navbar-custom -->
+
+            </header>
+            <!-- End Navigation Bar-->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="page-title">Time Tables</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                            <li class="breadcrumb-item active">Basic Tables</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        
+
+                            
+                        <!--- end row -->
+
+
+                       
+
+                            <div class="col-lg-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="/emptime" class="dropdown-item">Refresh</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="mt-0 header-title">Present Time</h4>
+                                    <p class="text-muted font-14 mb-3">
+                                        The Present Employee ID and time of entrance is their 
+                                    </p>
+
+                                    <div class="table-responsive">
+                                        <table class="table mb-0">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th>Sno</th>
+                                                <th>Time</th>
+                                                <th>Date</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {%for emp in data%}
+                                            <tr>
+                                                
+                                                <td>{{emp.Sno}}</td>
+                                                <td>{{emp.Time}}</td>
+                                                <td>{{emp.Date}}</td>
+                                            </tr>
+                                                {%endfor%}
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+                        
+
+                        
+
+                           
+
+                    
+                        
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                               2016 - 2020 &copy; Adminto theme by <a href="">Coderthemes</a> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-sm-block">
+                                    <a href="javascript:void(0);">About Us</a>
+                                    <a href="javascript:void(0);">Help</a>
+                                    <a href="javascript:void(0);">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                    <i class="mdi mdi-close"></i>
+                </a>
+                <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+            </div>
+            <div class="slimscroll-menu rightbar-content">
+
+                <div class="p-3">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Customize </strong> the overall color scheme, layout, etc.
+                    </div>
+                    <div class="mb-2">
+                        <img src="/static/assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                        <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                    </div>
+    
+                    <div class="mb-2">
+                        <img src="/static/assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="/static/assets/css/bootstrap-dark.min.css" 
+                            data-appStyle="/static/assets/css/app-dark.min.css" />
+                        <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                    </div>
+    
+                    <div class="mb-2">
+                        <img src="/static/assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="/static/assets/css/app-rtl.min.css" />
+                        <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                    </div>
+
+                    <div class="mb-2">
+                        <img src="/static/assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-5">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch" data-bsStyle="/static/assets/css/bootstrap-dark.min.css" 
+                            data-appStyle="/static/assets/css/app-dark-rtl.min.css" />
+                        <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                    </div>
+
+                    <a href="https://1.envato.market/k0YEM" class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-download mr-1"></i> Download Now</a>
+                </div>
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <a href="javascript:void(0);" class="right-bar-toggle demos-show-btn">
+            <i class="mdi mdi-cog-outline mdi-spin"></i> &nbsp;Choose Demos
+        </a>
+
+        <!-- Vendor js -->
+        <!--script src="assets/js/vendor.min.js"></script-->
+        <script type=text/javascript src="{{url_for('static', filename='assets/js/vendor.min.js') }}"></script>
+
+        <!-- App js -->
+        <script type=text/javascript src="{{url_for('static', filename='assets/js/app.min.js') }}"></script>
+        <!--script src="assets/js/app.min.js"></script-->
+        
+    </body>
+</html>
